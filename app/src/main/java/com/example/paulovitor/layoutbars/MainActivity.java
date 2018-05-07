@@ -1,11 +1,14 @@
 package com.example.paulovitor.layoutbars;
 
+import android.content.Intent;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
 import android.widget.Toast;
+import android.support.v7.widget.ShareActionProvider;
 
 public class MainActivity extends DebugActivity {
 
@@ -24,7 +27,20 @@ public class MainActivity extends DebugActivity {
         SearchView searchView = (SearchView) item.getActionView();
         searchView.setOnQueryTextListener(onSearch());
 
+        MenuItem itemShare = menu.findItem(R.id.action_share);
+        ShareActionProvider shareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(itemShare);
+
+        shareActionProvider.setShareIntent(getDefaultIntent());
+
         return true;
+    }
+
+    private Intent getDefaultIntent(){
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/*");
+        intent.putExtra(Intent.EXTRA_TEXT, "Text to share");
+
+        return intent;
     }
 
     private SearchView.OnQueryTextListener onSearch(){
