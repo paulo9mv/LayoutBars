@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/msg_azul_e_branco"
+        android:textColor="@color/azul"
+        android:background="@color/verde"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/texto"
+        android:text="@string/msg_vermelho_e_branco"
+        style="@style/styleExample"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/vermelho"
+        android:background="@color/branco"
+        android:text="@string/msg_azul_e_branco"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:textSize="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idEditText"
+        android:text="Testinho"/>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

@@ -5,5 +5,9 @@
     <string name="action_search">Search</string>
     <string name="action_settings">Settings</string>
     <string name="action_share">Share</string>
-
+    <string name="hello_world">Olá Mundo</string>
+    <string name="msg_verde_e_branco">Verde e branco</string>
+    <string name="msg_azul_e_branco">Azul e branco</string>
+    <string name="msg_vermelho_e_branco">Vermelho e branco</string>
+    <string name="texto1">Texto 1</string>
 </resources>

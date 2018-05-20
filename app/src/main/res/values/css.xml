@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="styleExample">
+        <item name="android:fontFamily">Arial</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:background">@color/branco</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+</resources>

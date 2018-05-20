@@ -7,9 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.SearchView;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v7.widget.ShareActionProvider;
+import android.support.v7.widget.SearchView;
 
 import java.util.Timer;
 
@@ -30,6 +32,7 @@ public class MainActivity extends DebugActivity {
         actionBar.addTab(actionBar.newTab().setText("Tab 1").setTabListener(new MyTabListener(this, 1)));
         actionBar.addTab(actionBar.newTab().setText("Tab 2").setTabListener(new MyTabListener(this, 2)));
         actionBar.addTab(actionBar.newTab().setText("Tab 3").setTabListener(new MyTabListener(this, 3)));
+
     }
 
     @Override
@@ -38,7 +41,7 @@ public class MainActivity extends DebugActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
         MenuItem item = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) item.getActionView();
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
         searchView.setOnQueryTextListener(onSearch());
 
         MenuItem itemShare = menu.findItem(R.id.action_share);
