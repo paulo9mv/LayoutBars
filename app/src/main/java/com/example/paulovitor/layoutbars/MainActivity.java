@@ -1,5 +1,6 @@
 package com.example.paulovitor.layoutbars;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
@@ -7,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,6 +35,16 @@ public class MainActivity extends DebugActivity {
         actionBar.addTab(actionBar.newTab().setText("Tab 1").setTabListener(new MyTabListener(this, 1)));
         actionBar.addTab(actionBar.newTab().setText("Tab 2").setTabListener(new MyTabListener(this, 2)));
         actionBar.addTab(actionBar.newTab().setText("Tab 3").setTabListener(new MyTabListener(this, 3)));
+
+        Button button = (Button) findViewById(R.id.switchScreen);
+        button.setVisibility(1);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent secondActivity = new Intent(getContext(), AutoCompleteExample.class);
+                startActivity(secondActivity);
+            }
+        });
 
     }
 
@@ -76,6 +89,10 @@ public class MainActivity extends DebugActivity {
                 return false;
             }
         };
+    }
+
+    public Context getContext(){
+        return this;
     }
 
     @Override

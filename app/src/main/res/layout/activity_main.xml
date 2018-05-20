@@ -32,9 +32,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mais um texto aqui"/>
+
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:stretchColumns="1"
         android:padding="16dp">
         <TableRow>
@@ -48,9 +49,14 @@
         <TableRow>
             <Button android:text="Logar" android:id="@+id/botaoLogin" />
         </TableRow>
-
     </TableLayout>
 
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trocar de tela"
+        android:textAlignment="center"
+        android:id="@+id/switchScreen"
+        />
 
 </LinearLayout>
