@@ -10,4 +10,6 @@
     <string name="msg_azul_e_branco">Azul e branco</string>
     <string name="msg_vermelho_e_branco">Vermelho e branco</string>
     <string name="texto1">Texto 1</string>
+    <string name="login">Nome de usuário</string>
+    <string name="password">Senha</string>
 </resources>

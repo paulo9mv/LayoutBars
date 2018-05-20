@@ -28,10 +28,29 @@
         android:textStyle="bold"
         android:fontFamily="serif"
         android:textSize="20dp"/>
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/idEditText"
-        android:text="Testinho"/>
+        android:text="Mais um texto aqui"/>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1"
+        android:padding="16dp">
+        <TableRow>
+            <TextView android:text="@string/login" android:padding="3dp"/>
+            <EditText android:id="@+id/campoLogin" android:padding="10dp" android:inputType="text" android:hint="Pista usuário"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/password" android:padding="3dp"/>
+            <EditText android:id="@+id/camposenha" android:padding="10dp" android:inputType="textPassword" android:hint="Pista senha"/>
+        </TableRow>
+        <TableRow>
+            <Button android:text="Logar" android:id="@+id/botaoLogin" />
+        </TableRow>
+
+    </TableLayout>
+
+
 
 </LinearLayout>
