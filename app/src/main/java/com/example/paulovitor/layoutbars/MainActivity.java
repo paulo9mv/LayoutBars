@@ -37,7 +37,6 @@ public class MainActivity extends DebugActivity {
         actionBar.addTab(actionBar.newTab().setText("Tab 3").setTabListener(new MyTabListener(this, 3)));
 
         Button button = (Button) findViewById(R.id.switchScreen);
-        button.setVisibility(1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
