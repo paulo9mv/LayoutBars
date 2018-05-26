@@ -52,36 +52,51 @@ public class Activity4 extends AppCompatActivity {
         });
 
          progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
          textView = (TextView) findViewById(R.id.idTexto);
         Button b = (Button) findViewById(R.id.startProgress);
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Set the progress status zero on each button click
                 progressStatus = 0;
+                // Visible the progress bar and text view
+                progressBar.setVisibility(View.VISIBLE);
+                textView.setVisibility(View.VISIBLE);
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        while (progressStatus < 100) {
-                            progressStatus += 1;
-                            // Update the progress bar and display the
-                            //current value in the text view
-                            handler.post(new Runnable() {
-                                public void run() {
-                                    progressBar.setProgress(progressStatus);
-                                    textView.setText(progressStatus+"/"+progressBar.getMax());
-                                }
-                            });
-                            try {
-                                // Sleep for 200 milliseconds.
-                                Thread.sleep(200);
-                            } catch (InterruptedException e) {
+                        while(progressStatus < 100){
+                            // Update the progress status
+                            progressStatus +=1;
+
+                            // Try to sleep the thread for 20 milliseconds
+                            try{
+                                Thread.sleep(40);
+                            }catch(InterruptedException e){
                                 e.printStackTrace();
                             }
-                        }
 
+                            // Update the progress bar
+                            handler.post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    progressBar.setProgress(progressStatus);
+                                    // Show the progress on TextView
+                                    textView.setText(progressStatus+"");
+                                    // If task execution completed
+                                    if(progressStatus == 100){
+                                        // Hide the progress bar from layout after finishing task
+                                        progressBar.setVisibility(View.GONE);
+                                        // Set a message of completion
+                                        textView.setText("Operation completed...");
+                                    }
+                                }
+                            });
+                        }
                     }
-                }).start();
+                }).start(); // Start the operation
             }
         });
 

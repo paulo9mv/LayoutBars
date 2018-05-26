@@ -23,25 +23,25 @@
         android:id="@+id/img"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/idTexto"
-        android:text="1"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+
+        android:textSize="15dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#ff2f33"
+        android:layout_marginLeft="10dp"
+        />
 
     <ProgressBar
         android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="wrap_content"
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="23dp"
-        android:layout_marginTop="20dp"
-        android:indeterminate="false"
-        android:max="100"
-        android:minHeight="50dp"
-        android:minWidth="200dp"
-        android:progress="1" />
+        android:indeterminate="true"
+        android:visibility="gone"
+        />
 
     <Button
         android:layout_width="match_parent"
