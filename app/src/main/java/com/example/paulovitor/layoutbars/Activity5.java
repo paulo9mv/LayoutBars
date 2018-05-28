@@ -1,11 +1,15 @@
 package com.example.paulovitor.layoutbars;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import java.io.IOException;
@@ -25,6 +29,20 @@ public class Activity5 extends AppCompatActivity {
         //Abre a janela enquanto busca a imagem
         dialog = ProgressDialog.show(this, "Exemplo", "Buscando imagem, aguarde...", false, true);
         downloadImagem(URL);
+
+        Button b = (Button) findViewById(R.id.button);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), Activity6.class);
+                startActivity(intent);
+            }
+        });
+
+    }
+
+    public Context getContext(){
+        return this;
     }
 
     private void downloadImagem(final String urlImg){

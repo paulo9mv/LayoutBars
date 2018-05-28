@@ -51,7 +51,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Trocar de tela"
+        android:text="Trocar para URL imagem"
         android:id="@+id/switchScreen4"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pular URL imagem"
+        android:id="@+id/switchScreen44"/>
 
 </LinearLayout>

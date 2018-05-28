@@ -101,6 +101,8 @@ public class Activity4 extends AppCompatActivity {
         });
 
         Button button = (Button) findViewById(R.id.switchScreen4);
+        Button button1 = (Button) findViewById(R.id.switchScreen44);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,6 +110,15 @@ public class Activity4 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), Activity6.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
