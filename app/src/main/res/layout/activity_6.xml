@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".Activity6">
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button6"
+        android:text="Avançar de tela"/>
+
 </android.support.constraint.ConstraintLayout>
