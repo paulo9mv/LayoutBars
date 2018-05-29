@@ -5,26 +5,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.TextView;
+import android.widget.ImageView;
 
-public class SimplesAdapter extends BaseAdapter {
+public class ImageAdapter extends BaseAdapter {
 
-    private String[] planetas = new String[] {"Mercúrio", "Vênus", "Terra", "Marte", "Júpiter", "Saturno", "Urano", "Netuno", "Plutão"};
     private Context context;
+    private final int[] imagens;
 
-    public SimplesAdapter(Context context){
-        super();
+    public ImageAdapter(Context context, int[] imagens){
         this.context = context;
+        this.imagens = imagens;
     }
 
     @Override
     public int getCount() {
-        return planetas.length;
+        return imagens.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return planetas[position];
+        return imagens[position];
     }
 
     @Override
@@ -34,11 +34,15 @@ public class SimplesAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        String planeta = planetas[position];
-        View view = LayoutInflater.from(context).inflate(R.layout.adapter_simples, parent, false);
 
-        TextView t = (TextView) view.findViewById(R.id.textinho);
-        t.setText(planeta);
+        //Infla a view do XML
+        View view = LayoutInflater.from(context).inflate(R.layout.adapter_gridview, parent, false);
+
+        //Linka os elementos
+        ImageView imageView = view.findViewById(R.id.imgGridView);
+
+        //Atualiza os elementos
+        imageView.setImageResource(imagens[position]);
 
         return view;
     }

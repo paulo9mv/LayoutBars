@@ -4,26 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     android:orientation="vertical"
-    tools:context=".Activity7">
+    tools:context=".Activity8"
+    android:padding="16dp">
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:id="@+id/listview"
-        android:layout_weight="1"
-        android:layout_margin="10dp" />
-
-    <Button
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button7"
-        android:text="Trocar de tela"/>
-
-    <View android:layout_height="20dp"
-        android:layout_width="match_parent"
+        android:src="@drawable/smile2"
         android:background="@color/colorPrimary"/>
+    
+    <ListView
+        android:id="@+id/listview1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"/>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/smile2"
+        android:background="@color/colorPrimary"/>
 
 </LinearLayout>
