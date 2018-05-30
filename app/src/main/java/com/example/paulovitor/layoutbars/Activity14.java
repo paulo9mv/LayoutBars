@@ -20,5 +20,4 @@ public class Activity14 extends AppCompatActivity {
 
         setContentView(new TouchScreenView(this));
     }
-
 }
