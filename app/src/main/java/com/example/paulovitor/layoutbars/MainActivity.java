@@ -45,6 +45,15 @@ public class MainActivity extends DebugActivity {
             }
         });
 
+        Button button1 = findViewById(R.id.jumpScreen);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent secondActivity = new Intent(getContext(), Activity14.class);
+                startActivity(secondActivity);
+            }
+        });
+
     }
 
     @Override

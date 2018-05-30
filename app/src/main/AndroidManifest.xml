@@ -32,7 +32,10 @@
         <activity android:name=".Activity9" />
         <activity android:name=".Activity10" />
         <activity android:name=".Activity11" />
-        <activity android:name=".Activity12"></activity>
+        <activity android:name=".Activity12" />
+        <activity android:name=".Activity13" />
+        <activity android:name=".Activity14"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
     </application>
 
 </manifest>
