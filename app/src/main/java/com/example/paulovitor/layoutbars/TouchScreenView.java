@@ -129,7 +129,7 @@ public class TouchScreenView extends View {
         img.setBounds(x, y, x + larguraImg, y + alturaImg);
         img.draw(canvas);
 
-        if(exitBox.contains(this.x, this.y)){
+        if(exitDoor && exitBox.contains(this.x, this.y)){
             Intent intent = new Intent((Activity)context, MainActivity.class);
             ((Activity)context).startActivity(intent);
         }
