@@ -1,5 +1,6 @@
 package com.example.paulovitor.layoutbars;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +19,8 @@ public class Activity14 extends AppCompatActivity {
         // Hide the action bar
         getSupportActionBar().hide();
 
-        setContentView(new TouchScreenView(this));
+        TouchScreenView touchScreenView = new TouchScreenView(this);
+
+        setContentView(touchScreenView);
     }
 }
