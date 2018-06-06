@@ -13,13 +13,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="@string/app_name"/>
         <activity
             android:name=".AutoCompleteExample"
             android:label="Atividade 2" />
@@ -34,8 +28,17 @@
         <activity android:name=".Activity11" />
         <activity android:name=".Activity12" />
         <activity android:name=".Activity13" />
-        <activity android:name=".Activity14"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+        <activity
+            android:name=".Activity14"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity android:name=".SelectScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".FragmentExample1"></activity>
     </application>
 
 </manifest>
